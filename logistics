@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background
+}
+</style>
+<style>
+table, th, td {
+    border:2px solid black
+}
+table {width: 100%;}
+</style>
+</head>  
+
+<body>
+    <h1>UAT Space Program</h1>
+<p>"space launch"</p>
+
+
+<table>
+    <tr>
+    <th>data type</th>
+    <th>readings </th>
+    </tr>
+    <tr>
+    <td>latitude:</td>
+    <td>0</td>
+    </tr>
+    <tr>
+    <td>longitude:</td>
+    <td>0</td>
+    </tr>
+    <tr>
+    <td>gps altitude:</td>
+    <td>0</td>
+    </tr>
+    <tr>
+    <td>bmpSensor altitude:</td>
+    <td>3.5643</td>
+    </tr>
+    <tr>
+    <td>bmpSensor pressure:</td>
+    <td>2.34</td>
+    </tr>
+    <tr>
+    <td>bmpSensor tempeture:</td>
+    <td>0</td>
+    </tr>
+    <tr>
+    <td>cssSensor tempeture:</td>
+    <td>20.54</td>
+    </tr>
+    <tr>
+    <td>cssSensor eCO2:</td>
+    <td>0</td>
+    </tr>
+    <tr>
+    <td>UV</td>
+    <td>21</td>
+    </tr>
+    <tr>
+    <td>accel-X</td>
+    <td>60</td>
+    </tr>
+    <tr>
+    <td>accel-Y</td>
+    <td>-0.76</td>
+    </tr>
+    <tr>
+    <td>accel-Z</td>
+    <td>-0.54</td>
+    </tr>
+    <tr>
+    <td>magnetic-X</td>
+    <td>10</td>
+    </tr>
+    <tr>
+    <td>magnetic-Y</td>
+    <td>0.001</td>
+    </tr>
+    <tr>
+    <td>magnetic-Z</td>
+    <td>-0.32</td>
+    </tr>
+    <tr>
+    <td>gyro-X</td>
+    <td>-0.43</td>
+    </tr>
+    <tr>
+    <td>gyro-Y</td>
+    <td>5.76</td>
+    </tr>
+    <tr>
+    <td>gyro-Z</td>
+    <td>3.05</td>
+    </tr>
+</table>
+
+<audio id="music" controls autoplay>
+    <source src="lofihiphop.mp3" type="audio/mpeg">
+</audio>
+<br/>
+<script>
+var music=document.getElementById("music").autoplay;
+    music.play();
+function playaudio(){
+    music.play();
+}
+console.log(music);
+</script>
+
+
+
+<input type="button" value="Start" onclick="StartBlastoffSequence()"> 
+<input type="button" value="Stop" onclick="alert ('launch haulted'); "> 
+
+
+        <span class = "BlastoffDisplay" id = "BlastoffDisplay" > Time until Blastoff </span>
+<script>
+
+    var currTime = 50;
+function StartBlastoffSequence(){
+
+    window.setInterval(function(){
+if (currTime > 0) 
+    currTime--;
+    document.getElementById("BlastoffDisplay").innerHTML = "The time is " + currTime + " seconds";
+        if(currTime==25){document.getElementById("BlastoffDisplay").innerHTML = "halfway to launch";}
+        else if(currTime==0){document.getElementById("BlastoffDisplay").innerHTML = "Blastoff";}
+},300
+);
+}
+</script>
+</body>
+</html>
