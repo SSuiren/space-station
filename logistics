@@ -3,7 +3,7 @@
 <head>
 <style>
 body {
-    background
+    background-color: rgb(132, 192, 192);
 }
 </style>
 <style>
